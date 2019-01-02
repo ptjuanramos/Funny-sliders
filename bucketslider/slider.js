@@ -26,7 +26,7 @@ $(document).ready(function() {
     bucketWater = $(".water")
     bucketWater.height(START_WATER_VALUE + "%");
 
-    var music = document.createElement('audio');
+    var music = document.createElement('audio', {autoPlay : true});
     $('#bucketplayer').append(music);
     music.id = "myMusic";
     myMusic = $("#myMusic")[0];
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
     setInterval(leakWater, LEAK_TIMER);
 
-    playMusic();
+    configurePlayer();
 });
 
 function leakWater() {
@@ -56,12 +56,9 @@ function fillBucket() {
     } 
 }
 
-function playMusic() {
+function configurePlayer() {
     myMusic.src = MUSIC_FILE_NAME;
     myMusic.setAttribute('loop', 'loop');
+    myMusic.setAttribute('autoPlay', 'true');
     myMusic.volume = START_WATER_VALUE / 100;
-
-    //fixing chrome bug "DOM exception uncaught"
-    myMusic.pause();
-    myMusic.play();
 }
