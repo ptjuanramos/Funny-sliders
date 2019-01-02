@@ -60,5 +60,8 @@ function playMusic() {
     myMusic.src = MUSIC_FILE_NAME;
     myMusic.setAttribute('loop', 'loop');
     myMusic.volume = START_WATER_VALUE / 100;
+
+    //fixing chrome bug "DOM exception uncaught"
+    myMusic.pause();
     myMusic.play();
 }
