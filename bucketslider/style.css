@@ -39,6 +39,7 @@ h5 {
     border-width: 10px;
     border-color: lightgray;
     border-radius: 10px;
+    touch-action: manipulation;
 }
 
 .water {
