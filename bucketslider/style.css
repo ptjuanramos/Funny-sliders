@@ -21,13 +21,20 @@ h5 {
     color:#fff;
 }
 
+.content {
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 0%;
+    margin-right: 0%;
+    position: relative;
+}
+
 .bucket {
     margin: auto;
-    margin-top: 50px;
+    float: left;
     padding-bottom: 0%;
     height: 300px;
-    width: 100px;
-    display: table;
+    width: 120px;
     position: relative;
     border-style: none solid solid solid;
     border-width: 10px;
@@ -36,10 +43,22 @@ h5 {
 }
 
 .water {
+    margin: 0;
     width: 100%;
     height: 10%;
     background-color: skyblue;
     position: absolute;
+    bottom: 0;
+}
+
+.spillWater {
+    width: 0px;
+    height: 50px;
+    position: absolute;
+    margin-left: 120px;
+    border-top-right-radius: 10px;
+    border-color: skyblue;
+    border-style: solid solid none none;
     bottom: 0;
 }
 
